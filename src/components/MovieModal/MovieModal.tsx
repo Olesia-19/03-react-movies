@@ -1,6 +1,6 @@
 import css from './MovieModal.module.css';
 import { createPortal } from "react-dom";
-import type Movie from '../../types/movie';
+import type { Movie } from '../../types/movie';
 import { useEffect } from 'react';
 
 interface MovieModalProps {
@@ -53,6 +53,6 @@ export default function MovieModal({ movie, onClose }: MovieModalProps) {
                     </p>
                 </div>
             </div>
-        </div>, document.getElementById("sidebar-root") as HTMLDivElement
+        </div>, document.getElementById("root") as HTMLDivElement
     );
 }

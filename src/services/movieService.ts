@@ -1,4 +1,4 @@
-import type Movie from '../types/movie'
+import type { Movie } from '../types/movie'
 const myToken = import.meta.env.VITE_TMDB_TOKEN;
 import axios from 'axios';
 
@@ -19,10 +19,10 @@ export default async function fetchMovies(query: string): Promise<FetchMoviesRes
     };
          
     const headers = {
-        Authorization: myToken,
+        Authorization: `Bearer ${myToken}`,
     };
          
-    const res = await axios.get(url, { headers, params });
+    const res = await axios.get<FetchMoviesResponse>(url, { headers, params });
     return res.data;
 };
     
