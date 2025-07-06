@@ -53,6 +53,6 @@ export default function MovieModal({ movie, onClose }: MovieModalProps) {
                     </p>
                 </div>
             </div>
-        </div>, document.getElementById("root") as HTMLDivElement
+        </div>, document.body
     );
 }
